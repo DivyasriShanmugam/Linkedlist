@@ -1,0 +1,17 @@
+class LinkedList:
+    def __init__(self):
+        self.head= None
+    def insst(self,data):
+        n=Node(data)
+        n.next=self.head
+        self.head = n
+    def end(self,data):
+        n=Node(data)
+        if self.head is None:
+            self.head = n
+            return head
+        else:
+            cur= self.head
+            while cur.next:
+                cur=cur.next
+            cur.next = n
