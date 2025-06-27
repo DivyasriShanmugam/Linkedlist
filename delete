@@ -1,0 +1,29 @@
+def dts(self):
+        if self.head is None:
+            return
+        self.head=self.head.next
+    def dte(self):
+        if self.head is None:
+            return
+        cur=self.head
+        if self.head.next is None:
+            self.head=None
+            return
+        while(cur.next and cur.next.next):
+            cur=cur.next
+        cur.next=None
+    def dtp(self,id):
+        if id==0:
+            self.head=self.head.next
+        else:
+            pos=0
+            pre= None
+            cur= self.head
+            temp=None
+            while cur and pos<=id:
+                temp=pre
+                pre=cur
+                cur=cur.next
+                pos+=1
+            temp.next=cur
+        
